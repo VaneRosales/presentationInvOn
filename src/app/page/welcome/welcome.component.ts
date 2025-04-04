@@ -38,9 +38,9 @@ export class WelcomeComponent {
   ];
 
   imagenes = [
-    { url: 'assets/buque.jpg', alt: 'imgcont1' },
-    { url: 'assets/contenedor.jpg', alt: 'imgcont2' },
-    { url: 'assets/inventario.jpg', alt: 'imgcont3' }
+    { url: 'assets/imgGalleria1.jpeg', alt: 'imgcont1' },
+    { url: 'assets/imgGalleria2.jpg', alt: 'imgcont2' },
+    { url: 'assets/imgGalleria3.jpeg', alt: 'imgcont3' }
   ];
 
   toggleDarkMode() {

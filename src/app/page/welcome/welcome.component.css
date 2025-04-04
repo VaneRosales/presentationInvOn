@@ -10,6 +10,12 @@
   background-color: var(--p-galleria-indicator) !important;
 }
 
+:host::ng-deep .p-card {
+  background-color: var(--p-card-bg);
+  color: var(--p-card-text-color);
+  border-radius: 8px;
+  padding: 0;
+}
 /* Botón de toggle */
 .toggle-btn {
   background-color: var(--primary-color);
@@ -19,4 +25,20 @@
   border-radius: 6px;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+/* Asegura que el grid ocupe el ancho completo */
+.grid {
+  width: 100%;
+}
+
+/* Estilo para las columnas */
+.col-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .md\:col-6 {
+    width: 50%;
+  }
 }

@@ -1,23 +1,29 @@
+
 /* Aplica variables a la aplicación */
+
 body {
   background-color: var(--surface-color);
+  font-family: var(--font-family);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
-
-
 /* Variables para modo claro (default) */
 :root {
+  /* Fuentes */
+  --font-family: 'Roboto', Roboto, sans-serif;
   /* Colores base */
   --primary-color: #7c3aed;       /* Violeta Aura */
-  --surface-color: #ffffff;       /* Fondo claro */
+  --surface-color: #ffffff;
+  --card-color:#D9D9D9;    /* Fondo claro */
   --text-color: #1e293b;          /* Texto oscuro */
   --border-color: #ffffff;        /* Bordes */
 
   /* Componentes PrimeNG */
   --p-galleria-bg: var(--surface-color);
   --p-galleria-indicator: var(--primary-color);
+  --p-card-bg: var(--card-color);
+  --p-card-text-color: var(--text-color);
 }
 
 /* Variables para modo oscuro */
@@ -26,9 +32,12 @@ body {
   --surface-color: #0f172a;       /* Fondo oscuro (azul noche) */
   --text-color: #f8fafc;          /* Texto claro */
   --border-color: #0f172a;        /* Bordes oscuros */
+  --card-color:#7D7D7D;
 
   /* Componentes PrimeNG en modo oscuro */
   --p-galleria-bg: #0f172a;
   --p-galleria-indicator: var(--primary-color);
+  --p-card-bg: var(--card-color);
+  --p-card-text-color: var(--text-color);
 }
 

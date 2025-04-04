@@ -1,19 +1,22 @@
+<!-- Bton para cambio de modo, lo que hace es llamar al metodo inyectar al servicio para consumir el metodo dentro de el -->
 <button
   class="toggle-btn"
   (click)="themeService.toggleDarkMode()"
 >
   {{ themeService.isDarkMode() ? 'Modo Claro' : 'Modo Oscuro' }}
 </button>
+
+<h1 class="text-6xl font-bold mb-3 text-primary">{{ title }}</h1>
+
 <div class="grid surface-ground p-3 md:p-6">
   <!-- Columna Izquierda: Descripción (6 columnas en desktop, 12 en móvil) -->
-  <div class="col-12 md:col-6 flex align-items-center p-4">
-      <div>
-          <h1 class="text-6xl font-bold mb-3 text-primary">{{ title }}</h1>
+  <div class="col-12 md:col-6 p-4">
+      <p-card class="description-card" [style]="{ 'max-width': '640px' }">
           <p class="text-xl line-height-3 text-700">{{ description }}</p>
-      </div>
+      </p-card>
   </div>
 
-  <div class="col-12 md:col-6 flex align-items-center justify-content-center p-4">
+  <div class="col-12 md:col-6 p-4">
     <p-galleria
         [value]="imagenes"
         [showThumbnails]="false"
