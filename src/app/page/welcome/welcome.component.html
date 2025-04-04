@@ -1,0 +1,38 @@
+<button
+  class="toggle-btn"
+  (click)="themeService.toggleDarkMode()"
+>
+  {{ themeService.isDarkMode() ? 'Modo Claro' : 'Modo Oscuro' }}
+</button>
+<div class="grid surface-ground p-3 md:p-6">
+  <!-- Columna Izquierda: Descripción (6 columnas en desktop, 12 en móvil) -->
+  <div class="col-12 md:col-6 flex align-items-center p-4">
+      <div>
+          <h1 class="text-6xl font-bold mb-3 text-primary">{{ title }}</h1>
+          <p class="text-xl line-height-3 text-700">{{ description }}</p>
+      </div>
+  </div>
+
+  <div class="col-12 md:col-6 flex align-items-center justify-content-center p-4">
+    <p-galleria
+        [value]="imagenes"
+        [showThumbnails]="false"
+        [showIndicators]="true"
+        [indicatorsPosition]="'bottom'"
+        [autoPlay]="true"
+        [responsiveOptions]="responsiveOptions"
+        [circular]="true"
+        [transitionInterval]="5000"
+        [containerStyle]="{ 'max-width': '640px', 'margin-top': '2em' }"
+        >
+        <!-- Imagen principal -->
+        <ng-template #item let-item>
+            <img
+                [src]="item.url"
+                [alt]="item.alt"
+                style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"
+            />
+        </ng-template>
+    </p-galleria>
+  </div>
+</div>

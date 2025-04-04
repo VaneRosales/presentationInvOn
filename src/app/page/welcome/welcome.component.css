@@ -1,0 +1,22 @@
+/* Galleria */
+:host ::ng-deep .p-galleria {
+  background-color: var(--p-galleria-bg);
+  border: 0px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0;
+}
+
+:host ::ng-deep .p-galleria-indicators .p-indicator {
+  background-color: var(--p-galleria-indicator) !important;
+}
+
+/* Botón de toggle */
+.toggle-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
