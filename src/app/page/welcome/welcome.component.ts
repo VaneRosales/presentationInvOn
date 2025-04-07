@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
-import { DividerModule } from 'primeng/divider';
 import { GalleriaModule } from 'primeng/galleria';
+import { SplitterModule } from 'primeng/splitter';
 import { ThemeService } from './../../services/theme.service';
 @Component({
   selector: 'app-welcome',
   standalone: true,
-  imports: [ButtonModule, CardModule, PanelModule, DividerModule, GalleriaModule],
+  imports: [ButtonModule, CardModule, PanelModule, GalleriaModule, SplitterModule],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.css'
 })
@@ -38,9 +38,11 @@ export class WelcomeComponent {
   ];
 
   imagenes = [
-    { url: 'assets/imgGalleria1.jpeg', alt: 'imgcont1' },
+    { url: 'assets/imgGalleria1.jpg', alt: 'imgcont1' },
     { url: 'assets/imgGalleria2.jpg', alt: 'imgcont2' },
-    { url: 'assets/imgGalleria3.jpeg', alt: 'imgcont3' }
+    { url: 'assets/imgGalleria3.jpg', alt: 'imgcont3' },
+    { url: 'assets/imgGalleria4.jpg', alt: 'imgcont4' },
+    { url: 'assets/imgGalleria5.jpg', alt: 'imgcont5' },
   ];
 
   toggleDarkMode() {
