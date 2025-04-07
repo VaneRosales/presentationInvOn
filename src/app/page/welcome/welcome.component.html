@@ -7,6 +7,11 @@
   <p-panel>
     <p-card class="description-card" [style]="{ 'max-width': '640px' }">
       <p class="text-xl line-height-3 text-700">{{ description }}</p>
+      <ul class="list-disc list-inside">
+        <li>Anexo II Control de mercancías en abandono</li>
+        <li>Anexo IV Control de destinación de mercancías en depósito temporal</li>
+        <li>Anexo VI Control de vehículos en abandono</li>
+      </ul>
     </p-card>
 
     <p-galleria
@@ -18,7 +23,7 @@
         [responsiveOptions]="responsiveOptions"
         [circular]="true"
         [transitionInterval]="3000"
-        [containerStyle]="{ 'max-width': '400px', 'margin': '0 auto' }"
+        [containerStyle]="{ 'max-width': '425', 'margin': '0 auto' }"
         >
         <ng-template #item let-item>
           <img
