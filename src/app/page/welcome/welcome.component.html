@@ -1,39 +1,54 @@
-
-<p-panel >
-
-  <ng-template pTemplate="header">
+<!-- Botón modo claro/oscuro -->
+<button
+  pButton
+  type="button"
+  (click)="themeService.toggleDarkMode()"
+  class="p-button-outlined ml-auto mb-3"
+>
+  {{ themeService.isDarkMode() ? 'Modo Claro' : 'Modo Oscuro' }}
+</button>
+<!-- Layout en Grid con 70/30 -->
+<div class="grid surface-ground p-3 md:p-6">
+  <div>
     <h1>Sistema de Inventario en Línea (InvOn)</h1>
-  </ng-template>
-  <p-panel>
-    <p-card class="description-card" [style]="{ 'max-width': '640px' }">
-      <p class="text-xl line-height-3 text-700">{{ description }}</p>
-      <ul class="list-disc list-inside">
-        <li>Anexo II Control de mercancías en abandono</li>
-        <li>Anexo IV Control de destinación de mercancías en depósito temporal</li>
-        <li>Anexo VI Control de vehículos en abandono</li>
-      </ul>
-    </p-card>
+  </div>
+  <!-- Columna izquierda (70%) -->
+  <div class="col-12 md:col-8 flex align-items-stretch p-3">
+    <div class="surface-100 p-4 border-round-xl text-900 w-full flex flex-column justify-content-center">
+      <p class="mb-2">
+        Control de inventario electrónico de mercancías en Puerto de Acajutla. <br />
+        Unión Portuaria del Pacífico. <br />
+        En cumplimiento a las Disposiciones Administrativas de Carácter General DACG DGA. <br />
+        009-2024
+      </p>
+      <p class="mt-3 mb-1"><strong>Anexo II.</strong> Control de mercancías en abandono</p>
+      <p class="mb-1"><strong>Anexo IV.</strong> Control de destinación de mercancías en depósito temporal</p>
+      <p class="mb-0"><strong>Anexo VI.</strong> Control de vehículos en abandono</p>
+    </div>
+  </div>
 
-    <p-galleria
+  <!-- Columna derecha (30%) -->
+  <div class="col-12 md:col-4 flex align-items-stretch p-3">
+    <div class="w-full flex align-items-center justify-content-center">
+      <p-galleria
         [value]="imagenes"
         [showThumbnails]="false"
         [showIndicators]="true"
         [indicatorsPosition]="'bottom'"
         [autoPlay]="true"
-        [responsiveOptions]="responsiveOptions"
         [circular]="true"
-        [transitionInterval]="3000"
-        [containerStyle]="{ 'max-width': '425', 'margin': '0 auto' }"
-        >
+        [transitionInterval]="5000"
+        [containerStyle]="{ width: '100%', height: '100%', background: 'transparent', boxShadow: 'none', border: 'none' }"
+      >
         <ng-template #item let-item>
           <img
-              [src]="item.url"
-              [alt]="item.alt"
-              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px;"
+            [src]="item.url"
+            [alt]="item.alt"
+            class="w-full border-round-xl"
+            style="object-fit: cover; aspect-ratio: 4/3;"
           />
         </ng-template>
-
-    </p-galleria>
-
-  </p-panel>
-</p-panel>
+      </p-galleria>
+    </div>
+  </div>
+</div>

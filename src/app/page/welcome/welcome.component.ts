@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { GalleriaModule } from 'primeng/galleria';
-import { SplitterModule } from 'primeng/splitter';
+import { SplitterModule } from 'primeng/splitter'
 import { ThemeService } from './../../services/theme.service';
 @Component({
   selector: 'app-welcome',
@@ -16,7 +16,7 @@ import { ThemeService } from './../../services/theme.service';
 export class WelcomeComponent {
 
   title = 'Sistema de Inventario en Línea (InvOn)';
-  description = 'Control de inventario electrónico de mercancías en Puerto de Acajutla. Unión Portuaria del Pacifico En cumplimiento a las Disposiciones Administrativas de Carácter General DACG DGA. 009-2024 - Anexo II Control de mercancías en abandono - Anexo IV Control de destinación de mercancías en depósito temporal - Anexo VI Control de vehículos en abandono';
+  description = 'Control de inventario electrónico de mercancías en Puerto de Acajutla. Unión Portuaria del Pacifico En cumplimiento a las Disposiciones Administrativas de Carácter General DACG DGA. 009-2024';
 
   activeIndex: number = 0;
   responsiveOptions: any[] = [
