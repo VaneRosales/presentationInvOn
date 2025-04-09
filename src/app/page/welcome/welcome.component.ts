@@ -15,9 +15,7 @@ import { ThemeService } from './../../services/theme.service';
 })
 export class WelcomeComponent {
 
-  title = 'Sistema de Inventario en Línea (InvOn)';
-  description = 'Control de inventario electrónico de mercancías en Puerto de Acajutla. Unión Portuaria del Pacifico En cumplimiento a las Disposiciones Administrativas de Carácter General DACG DGA. 009-2024';
-
+  displayBasic = false;
   activeIndex: number = 0;
   responsiveOptions: any[] = [
     {
@@ -38,13 +36,16 @@ export class WelcomeComponent {
   ];
 
   imagenes = [
-    { url: 'assets/imgGalleria1.jpg', alt: 'imgcont1' },
-    { url: 'assets/imgGalleria2.jpg', alt: 'imgcont2' },
-    { url: 'assets/imgGalleria3.jpg', alt: 'imgcont3' },
-    { url: 'assets/imgGalleria4.jpg', alt: 'imgcont4' },
-    { url: 'assets/imgGalleria5.jpg', alt: 'imgcont5' },
+    { url: 'assets/imgGalleria1.png', alt: 'imgcont1' },
+    { url: 'assets/imgGalleria2.png', alt: 'imgcont2' },
+    //{ url: 'assets/imgGalleria3.jpg', alt: 'imgcont3' },
+    { url: 'assets/imgGalleria4.png', alt: 'imgcont4' },
+    //{ url: 'assets/imgGalleria5.jpg', alt: 'imgcont5' },
   ];
 
+  showFullscreen() {
+    this.displayBasic = true;
+  }
   toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
