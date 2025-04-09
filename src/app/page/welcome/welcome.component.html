@@ -1,20 +1,10 @@
-<!-- Botón modo claro/oscuro -->
-<button
-  pButton
-  type="button"
-  (click)="themeService.toggleDarkMode()"
-  class="p-button-outlined ml-auto mb-3"
->
-  {{ themeService.isDarkMode() ? 'Modo Claro' : 'Modo Oscuro' }}
-</button>
-<!-- Layout en Grid con 70/30 -->
 <div class="grid surface-ground p-3 md:p-6">
   <div>
-    <h1>Sistema de Inventario en Línea (InvOn)</h1>
+    <h1 style="font-size: 3rem;">Sistema de Inventario en Línea (InvOn)</h1>
   </div>
-  <!-- Columna izquierda (70%) -->
+  <!-- Columna izquierda (80%) -->
   <div class="col-12 md:col-8 flex align-items-stretch p-3">
-    <div class="surface-100 p-4 border-round-xl text-900 w-full flex flex-column justify-content-center">
+    <div class="surface-100 p-4 border-round-xl text-900 w-full flex flex-column justify-content-center" style="height: 300px;">
       <p class="mb-2">
         Control de inventario electrónico de mercancías en Puerto de Acajutla. <br />
         Unión Portuaria del Pacífico. <br />
@@ -27,7 +17,7 @@
     </div>
   </div>
 
-  <!-- Columna derecha (30%) -->
+  <!-- Columna derecha (20%) -->
   <div class="col-12 md:col-4 flex align-items-stretch p-3">
     <div class="w-full flex align-items-center justify-content-center">
       <p-galleria
@@ -41,12 +31,14 @@
         [containerStyle]="{ width: '100%', height: '100%', background: 'transparent', boxShadow: 'none', border: 'none' }"
       >
         <ng-template #item let-item>
-          <img
-            [src]="item.url"
-            [alt]="item.alt"
-            class="w-full border-round-xl"
-            style="object-fit: cover; aspect-ratio: 4/3;"
-          />
+          <div class="w-full flex justify-content-center" style="height: 300px;">
+            <img
+              [src]="item.url"
+              [alt]="item.alt"
+              class="border-round-xl"
+              style="object-fit: cover; height: 100%; width: 100%;"
+            />
+          </div>
         </ng-template>
       </p-galleria>
     </div>
